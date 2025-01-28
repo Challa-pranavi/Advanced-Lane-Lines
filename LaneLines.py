@@ -221,7 +221,7 @@ class LaneLines:
 
         direction = max(set(self.dir), key = self.dir.count)
         msg = "Keep Straight Ahead"
-        curvature_msg = "Curvature = {:.0f} m".format(min(lR, rR))
+        curvature_msg = "Curvature = {:.0f} cm".format(min(lR, rR))
         if direction == 'L':
             y, x = self.left_curve_img[:,:,3].nonzero()
             out_img[y, x-100+W//2] = self.left_curve_img[y, x, :3]
